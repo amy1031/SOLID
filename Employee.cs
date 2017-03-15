@@ -5,7 +5,8 @@ namespace Solid
 {
     public abstract class Employee
     {
-        // this class violates the 'Interface Segregation' principle
+        // This class violates the 'Interface Segregation' principle
+    	// It is too generic in reference to fulltime & contract employees
         
         public int Id { get; set; }
         public string Name { get; set; }
@@ -35,7 +36,8 @@ namespace Solid
 
     public class ContractEmployee : Employee
     {
-		// this class violates the 'Liskov Substitution' principle
+	// This class violates the 'Liskov Substitution' principle
+	
         public override string GetProjectDetails()
         {
             return "Child Project";
@@ -49,7 +51,7 @@ namespace Solid
 
     public class EmployeeService
     {
-        // this class violates the 'Single Responsibility' principle
+        // This class violates the 'Single Responsibility' principle
 
         public bool SaveEmployee(Employee employee)
         {
