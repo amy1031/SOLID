@@ -2,7 +2,8 @@ namespace Solid
 {
     public class ReportGenerator
     {
-		// this class violates the 'Open/Closed' principle
+	// This class violates the 'Open/Closed' principle
+    	// What if we wanted to add a report type?
 		
         public string ReportType { get; set; }
 
