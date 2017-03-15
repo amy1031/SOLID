@@ -1,21 +1,22 @@
 namespace Solid
 {
-	// this class violates the 'Dependency Inversion' principle
+	// This class violates the 'Dependency Inversion' principle
+	// What if we wanted to send a different type of notification?
 	
 	public class Notification
 	{
-        private Email email;
+        	private Email email;
 
 		public Notification()
 		{
-            this.email = new Email();
-        }
+			this.email = new Email();
+        	}
 
 		public void SendNotification()
 		{
-            this.email.Send();
-        }
-    }
+            		this.email.Send();
+        	}
+    	}
 
 	public class Email
 	{
