@@ -1,21 +1,20 @@
 using System;
+using Solid.Interfaces;
 
 namespace Solid
 {
-	public class Subscriber
-	{
-		public string Name { get; set; }
+    public class Subscriber
+    {
+        public string Name { get; set; }
 
-		public Subscriber(string name)
-		{
-			Name = name;
-		}
+        public Subscriber(string name)
+        {
+            Name = name;
+        }
 
-		public void Notify(string message)
-		{
-			Console.WriteLine($"Person: {Name}");
-			Console.WriteLine($"Email: {message}");
-			Console.WriteLine("");
-		}
-	}
+        public virtual void Notify(INotify notify, string message)
+        {
+			notify.PrintNotification($"Person: {Name}", message);
+        }
+    }
 }

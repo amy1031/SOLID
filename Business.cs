@@ -1,4 +1,5 @@
 using System;
+using Solid.Interfaces;
 
 namespace Solid
 {
@@ -6,6 +7,11 @@ namespace Solid
 	{
 		public Business(string name) : base(name)
 		{
+		}
+
+		public override void Notify(INotify notify, string message)
+		{
+			notify.PrintNotification($"Business: {Name}", message);
 		}
 	}
 }

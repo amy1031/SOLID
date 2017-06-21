@@ -7,7 +7,9 @@ namespace Solid
     {
         static void Main(string[] args)
         {
-			var network = new Network();
+            var email = new Email();
+            var text = new Text();
+			var network = new Network(email);
 
 			network.Subscribers.AddRange(new List<Subscriber>
 			{

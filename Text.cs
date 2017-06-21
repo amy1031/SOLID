@@ -4,7 +4,7 @@ using Solid.Interfaces;
 
 namespace Solid
 {
-    public class Email : IEmail
+    public class Text : INotify
     {
         public void Send(List<Subscriber> subscribers, string message)
         {
@@ -18,11 +18,10 @@ namespace Solid
         {
             subscriber.Notify(this, message);
         }
-
         public void PrintNotification(string tagLine, string message)
         {
             Console.WriteLine(tagLine);
-            Console.WriteLine($"Email: {message}");
+            Console.WriteLine($"Text: {message}");
             Console.WriteLine("");
         }
     }
